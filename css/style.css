@@ -1,0 +1,579 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.page__header {
+  width: 100%;
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.page__header .logo {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+.page__header .nav {
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  max-width: 520px;
+}
+.page__header .nav a {
+  text-transform: uppercase;
+  color: white;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 820px;
+  background: url("../img/Eagle.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.page .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.page .description .description__mogo {
+  font-size: calc(50px + 100 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.page .description .description__mogo:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: white;
+  width: 60px;
+  height: 3px;
+}
+.page .description .description__template {
+  font-family: "Kaushan Script", cursive;
+  font-size: calc(36px + 36 * ((100vw - 320px) / 1600));
+  margin-bottom: 42px;
+}
+.page .description .learn-more {
+  padding: 10px 30px;
+  border: 3px solid #fff;
+  width: 165px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background 0.1s linear, color 0.1s linear;
+}
+
+.slides {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slides__iner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.slides__iner .slide__item {
+  width: 23%;
+}
+.slides__iner .slide__item.active .block {
+  opacity: 1;
+}
+.slides__iner .slide__item.active::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 6%;
+  height: 3px;
+  background-color: #f38181;
+}
+.slides__iner .slide__item span {
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.slides__iner .slide__item b {
+  color: white;
+  font-size: 24px;
+}
+.slides__iner .slide__item .block {
+  height: 3px;
+  background-color: #fff;
+  opacity: 0.4;
+  margin-bottom: 25px;
+}
+
+.section {
+  text-align: center;
+  margin: 80px 0;
+}
+.section .section__header .section__suptitle {
+  font-family: "Kaushan Script", sans-serif;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+.section .section__header .section__title {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+}
+.section .section__header .section__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 40px auto 45px;
+}
+.section .section__header .section__text {
+  font-size: 15px;
+  color: #999999;
+  margin: 0 11.5%;
+  line-height: 24px;
+  margin-bottom: 105px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card__item {
+  width: 33.33333%;
+  padding: 0 15px;
+}
+
+.card__description {
+  display: none;
+}
+
+.card__img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card__title {
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.card__text {
+  color: #999;
+  text-align: left;
+  font-size: 15px;
+  padding-top: 20px;
+  line-height: 24px;
+}
+
+.card__icon {
+  align-self: flex-start;
+  padding-right: 30px;
+}
+
+#service .card {
+  margin-top: 50px;
+}
+#service .card__item {
+  padding: 0;
+}
+#service .card__item:nth-child(-n+3) {
+  border-bottom: 1px solid #e5e5e5;
+}
+#service .card__inner {
+  display: flex;
+  padding: 50px 35px;
+  height: 100%;
+}
+
+.features {
+  padding-top: 80px;
+  height: 850px;
+  background: url("../../img/feature/ipad.png") 50% 100% no-repeat, url("../../img/feature/background.jpg") no-repeat;
+  background-size: 580px, cover;
+}
+.features::after {
+  content: "";
+  background-image: url("../../img/feature/iphone.png");
+  background-size: 260px 440px;
+  width: 230px;
+  height: 410px;
+  background-repeat: no-repeat;
+  margin-left: 200px;
+  margin-top: 100px;
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 120px;
+}
+
+.facts__block {
+  background-color: #95e1d3;
+}
+
+.facts {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+}
+
+.fact__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 33.3333333333%;
+  height: 270px;
+  text-align: center;
+  border-left: 1px solid #b5eae0;
+}
+.fact__item:last-of-type {
+  border-right: 1px solid #b5eae0;
+}
+.fact__item .fact__count {
+  font-size: calc(24px + 48 * ((100vw - 320px) / 1600));
+  font-weight: bold;
+  color: #fff;
+}
+.fact__item .fact__text {
+  color: #fff;
+  font-size: calc(10px + 5 * ((100vw - 320px) / 1600));
+  text-transform: uppercase;
+  padding-top: 30px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1230px) {
+  .intro {
+    min-height: 720px;
+  }
+
+  .slide__item {
+    width: 22%;
+  }
+
+  .fact__item {
+    height: 220px;
+  }
+  .fact__item .fact__text {
+    padding-top: 22px;
+  }
+}
+@media (max-width: 990px) {
+  .intro {
+    min-height: 680px;
+  }
+
+  .slide__item {
+    width: 21%;
+  }
+
+  .fact__item {
+    height: 150px;
+  }
+  .fact__item .fact__text {
+    padding-top: 17px;
+  }
+
+  .features {
+    background-size: 550px, cover;
+  }
+  .features::after {
+    background-size: 240px 420px;
+    width: 207px;
+    height: 390px;
+    margin-left: 100px;
+    margin-top: 250px;
+  }
+
+  #service .card__item {
+    width: 50%;
+    margin: 15px auto;
+  }
+  #service .card__item:nth-child(-n+4) {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+@media (max-width: 770px) {
+  .facts {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fact__item {
+    height: 120px;
+    border: none;
+  }
+  .fact__item:last-of-type {
+    border: none;
+  }
+  .fact__item .fact__text {
+    padding-top: 10px;
+  }
+
+  #service .card__item {
+    width: 100%;
+    max-width: 420px;
+  }
+  #service .card__item:nth-child(n) {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .features {
+    height: 700px;
+    background-size: 450px, cover;
+  }
+  .features::after {
+    background-size: 200px 360px;
+    width: 172px;
+    height: 340px;
+    margin-left: 100px;
+    margin-top: 150px;
+  }
+
+  .card {
+    margin-top: -80px;
+  }
+
+  .card__item {
+    width: 100%;
+    max-width: 410px;
+    margin: 15px auto;
+  }
+
+  .card__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro {
+    min-height: 620px;
+  }
+
+  .slides .slide__item {
+    width: 20%;
+  }
+  .slides .slide__item span:last-child {
+    display: none;
+  }
+
+  .page__header .nav {
+    display: none;
+  }
+  .page__header.active {
+    overflow: auto;
+    height: 100vh;
+    min-height: 320px;
+  }
+  .page__header.active .nav {
+    display: block;
+    margin: 0 -15px;
+    margin-top: 0px;
+    padding-left: 3px;
+    padding-top: 40px;
+    background-color: #e88183;
+    max-width: 785px;
+    min-height: 430px;
+  }
+  .page__header.active div {
+    padding: 15px;
+  }
+  .page__header.active div a {
+    font-size: 25px;
+  }
+  .page__header.active .logo {
+    margin-top: -15px;
+    margin-left: -15px;
+  }
+
+  .nav-toggle {
+    width: 30px;
+    padding: 10px 0;
+    display: block;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 34.5px;
+    right: 24px;
+    z-index: 1;
+  }
+  .nav-toggle .nav-toggle__item {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .nav-toggle .nav-toggle__item:after, .nav-toggle .nav-toggle__item:before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.3s linear;
+  }
+  .nav-toggle .nav-toggle__item:before {
+    top: 8px;
+  }
+  .nav-toggle .nav-toggle__item:after {
+    bottom: 8px;
+  }
+
+  .nav-toggle.active .nav-toggle__item {
+    display: block;
+    background-color: transparent;
+  }
+  .nav-toggle.active .nav-toggle__item:before {
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translate3d(0px, 3px, 0);
+  }
+  .nav-toggle.active .nav-toggle__item:after {
+    transform-origin: left top;
+    transform: rotate(45deg) translate3d(0px, -2px, 0);
+  }
+}
+@media (max-width: 575px) {
+  .intro {
+    min-height: 595px;
+  }
+
+  .features {
+    height: 550px;
+    background-size: 300px, cover;
+  }
+  .features::after {
+    background-size: 150px 260px;
+    width: 130px;
+    height: 240px;
+    margin-left: 60px;
+    margin-top: 100px;
+  }
+
+  .slides .slide__item {
+    width: 19%;
+    height: 500px;
+  }
+  .slides .slide__item span {
+    display: none;
+  }
+}
