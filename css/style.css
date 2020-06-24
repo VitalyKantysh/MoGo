@@ -559,19 +559,18 @@ body {
 
   .features {
     height: 550px;
-    background-size: 300px, cover;
+    background-size: 250px, cover;
   }
   .features::after {
-    background-size: 150px 260px;
-    width: 130px;
-    height: 240px;
-    margin-left: 60px;
-    margin-top: 100px;
+    background-size: 130px 210px;
+    width: 110px;
+    height: 195px;
+    margin-left: 30px;
+    margin-top: 130px;
   }
 
   .slides .slide__item {
     width: 19%;
-    height: 500px;
   }
   .slides .slide__item span {
     display: none;
